@@ -2,12 +2,6 @@
 
 A simple package, that creates a scrollbar for Flutter Web
 
-# About me 
-You can find out everything about the creation of this package, how it works by opening this link. 
-https://hobbister.com/2020/11/24/flutter-web-scrollbar-with-generic-desktop-feel/
-It would be very appriciated.
-
-
 # Getting started
 The package should only be used for Flutter Web and on the desktop version of the site, there are better suited mobile scrollbars, than this package.
 
@@ -18,9 +12,9 @@ You can use it on dynamically sized widgets also, but it is a possibility to con
 This package depends on my other package, which is the smooth_scroll_web package. The scrollbar would not work without it.
 
 # Moving the scrollbar
-![Movement](https://gitlab.com/dezso15/webscrollbar/-/raw/master/scrollbar_moving.gif)
+![Movement](https://github.com/Trojan9/web_scroll_flutter/blob/master/scrollbar_moving.gif)
 # Resizing the widget
-![Resizing](https://gitlab.com/dezso15/webscrollbar/-/raw/master/scrollbar_resize.gif)
+![Resizing](https://github.com/Trojan9/web_scroll_flutter/blob/master/scrollbar_resize.gif)
 
 # Examples
 ```dart
