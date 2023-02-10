@@ -50,10 +50,12 @@ class _ScrollBarState extends State<ScrollBar> {
   Widget build(BuildContext context) {
     if (fullHeight == null) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        setState(() {
-          fullHeight = widget.controller.position.maxScrollExtent +
-              widget.controller.position.viewportDimension;
-        });
+        if (widget.controller.hasClients) {
+          setState(() {
+            fullHeight = widget.controller.position.maxScrollExtent +
+                widget.controller.position.viewportDimension;
+          });
+        }
       });
       return widget.child;
     }
