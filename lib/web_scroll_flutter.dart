@@ -12,13 +12,13 @@ const DEFAULT_SCROLLBAR_COLOR = const Color(0x77FFFFFF);
 
 class WebScrollBar extends StatefulWidget {
   ///Same ScrollController as the child widget's.
-  final ScrollController? controller;
+  final ScrollController controller;
 
   ///Child widget.
-  final Widget? child;
+  final Widget child;
 
   ///The height of the child widget.
-  final double? visibleHeight;
+  final double visibleHeight;
 
   ///Lenght of the Thumb fade in out animations in milliseconds.
   final int animationLength;
@@ -36,9 +36,9 @@ class WebScrollBar extends StatefulWidget {
   final double scrollbarMaxWidth;
 
   WebScrollBar({
-    @required this.controller,
-    @required this.child,
-    @required this.visibleHeight,
+    required this.controller,
+    required this.child,
+    required this.visibleHeight,
     this.scrollbarMinWidth = DEFAULT_MIN_WIDTH,
     this.scrollbarMaxWidth = DEFAULT_MAX_WIDTH,
     this.animationLength = DEFAULT_ANIMATION_LENGTH_MS,
@@ -57,7 +57,7 @@ class _WebScrollBarState extends State<WebScrollBar> {
       controller: widget.controller,
       child: ScrollBar(
         controller: widget.controller,
-        visibleHeight: MediaQuery.of(context).size.height,
+        visibleHeight: widget.visibleHeight,
         animationLength: widget.animationLength,
         scrollThumbColor: widget.scrollThumbColor,
         scrollbarColor: widget.scrollbarColor,

@@ -8,10 +8,10 @@ const int DEFAULT_SCROLL_SPEED = 130;
 
 class SmoothScrollWeb extends StatelessWidget {
   ///Same ScrollController as the child widget's.
-  final ScrollController? controller;
+  final ScrollController controller;
 
   ///Child scrollable widget.
-  final Widget? child;
+  final Widget child;
 
   ///Scroll speed px/scroll.
   final int scrollSpeed;
@@ -25,8 +25,8 @@ class SmoothScrollWeb extends StatelessWidget {
   double _scroll = 0;
 
   SmoothScrollWeb({
-    @required this.controller,
-    @required this.child,
+    required this.controller,
+    required this.child,
     this.scrollSpeed = DEFAULT_SCROLL_SPEED,
     this.scrollAnimationLength = DEFAULT_NORMAL_SCROLL_ANIMATION_LENGTH_MS,
     this.curve = Curves.linear,
@@ -34,9 +34,9 @@ class SmoothScrollWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    controller!.addListener(() {
-      if (controller!.position.activity is IdleScrollActivity) {
-        _scroll = controller!.position.extentBefore;
+    controller.addListener(() {
+      if (controller.position.activity is IdleScrollActivity) {
+        _scroll = controller.position.extentBefore;
       }
     });
 
@@ -49,8 +49,8 @@ class SmoothScrollWeb extends StatelessWidget {
           } else {
             _scroll -= scrollSpeed;
           }
-          if (_scroll > controller!.position.maxScrollExtent) {
-            _scroll = controller!.position.maxScrollExtent;
+          if (_scroll > controller.position.maxScrollExtent) {
+            _scroll = controller.position.maxScrollExtent;
             millis = scrollAnimationLength ~/ 2;
           }
           if (_scroll < 0) {
@@ -58,7 +58,7 @@ class SmoothScrollWeb extends StatelessWidget {
             millis = scrollAnimationLength ~/ 2;
           }
 
-          controller!.animateTo(
+          controller.animateTo(
             _scroll,
             duration: Duration(milliseconds: millis),
             curve: curve,
