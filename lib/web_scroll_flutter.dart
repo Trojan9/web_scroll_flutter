@@ -57,7 +57,7 @@ class _WebScrollBarState extends State<WebScrollBar> {
       controller: widget.controller,
       child: ScrollBar(
         controller: widget.controller,
-        visibleHeight: widget.visibleHeight,
+        visibleHeight: MediaQuery.of(context).size.height,
         animationLength: widget.animationLength,
         scrollThumbColor: widget.scrollThumbColor,
         scrollbarColor: widget.scrollbarColor,
