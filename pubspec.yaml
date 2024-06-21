@@ -3,8 +3,9 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage: https://github.com/Trojan9/web_scroll_flutter
 
+
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: '>=2.18.4 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
